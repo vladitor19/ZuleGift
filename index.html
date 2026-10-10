@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#f7e9ec" />
+  <title>Un regalo para ti ❤️</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- =================== 1. INTRO (regalo cerrado) =================== -->
+  <section id="screen-intro" class="screen screen--center active">
+    <div class="intro-card">
+      <p class="eyebrow" data-field="intro.etiqueta"></p>
+      <p class="eyebrow eyebrow--small" data-field="intro.paraLabel"></p>
+      <h1 class="serif-xl" data-field="intro.para"></h1>
+      <p class="intro-de">De <strong data-field="intro.de"></strong> <span class="heart-inline">❤</span></p>
+      <p class="intro-mensaje serif-italic" data-field="intro.mensaje"></p>
+    </div>
+    <p class="hint" data-field="intro.instruccion"></p>
+    <button class="heart-btn heart-btn--intro" id="intro-heart" aria-label="Abrir regalo">
+      <span class="heart-shape"></span>
+    </button>
+  </section>
+
+  <!-- =================== 2. TAP DEL CORAZÓN =================== -->
+  <section id="screen-tap" class="screen screen--center">
+    <button class="heart-btn heart-btn--big" id="tap-heart" aria-label="Toca el corazón">
+      <span class="heart-shape heart-shape--big"></span>
+    </button>
+    <p class="hint hint--tap" data-field="corazon.instruccion"></p>
+    <div class="tap-progress" id="tap-progress" aria-hidden="true"></div>
+  </section>
+
+  <!-- =================== 3. REGALO ABIERTO =================== -->
+  <section id="screen-opened" class="screen screen--center">
+    <div class="opened-inner">
+      <h2 class="serif-lg" data-field="abierto.titulo"></h2>
+      <p class="muted" data-field="abierto.subtitulo"></p>
+    </div>
+  </section>
+
+  <!-- =================== 4. CONTENIDO PRINCIPAL (scroll) =================== -->
+  <main id="screen-main" class="screen screen--scroll">
+
+    <!-- HERO -->
+    <section class="hero">
+      <img class="hero__img" data-src="hero.foto" alt="Foto principal" />
+      <div class="hero__overlay"></div>
+      <div class="hero__text">
+        <p class="eyebrow eyebrow--light" data-field="hero.paraLabel"></p>
+        <h1 class="serif-xl serif-light" data-field="hero.para"></h1>
+        <p class="hero__subtitle serif-italic serif-light" data-field="hero.subtitulo"></p>
+        <p class="hero__footer" data-field="hero.pie"></p>
+      </div>
+      <div class="scroll-cue">⌄</div>
+    </section>
+
+    <!-- NUESTRA CANCIÓN -->
+    <section class="block block--center">
+      <p class="eyebrow" data-field="cancion.seccion"></p>
+      <div class="song-photo">
+        <img data-src="cancion.foto" alt="Nuestra canción" />
+      </div>
+      <h3 class="serif-md" data-field="cancion.titulo"></h3>
+      <p class="eyebrow eyebrow--tiny" data-field="cancion.plataforma"></p>
+      <div class="spotify-wrap" id="spotify-wrap"></div>
+    </section>
+
+    <!-- GALERÍA -->
+    <section class="block block--center">
+      <p class="eyebrow" data-field="galeria.seccion"></p>
+      <h3 class="serif-md" data-field="galeria.titulo"></h3>
+      <div class="gallery" id="gallery"></div>
+      <div class="gallery-dots" id="gallery-dots"></div>
+    </section>
+
+    <!-- CARTA -->
+    <section class="block">
+      <p class="eyebrow" data-field="carta.seccion"></p>
+      <div class="letter serif-italic" id="letter"></div>
+      <p class="letter-firma serif" id="letter-firma"></p>
+    </section>
+
+    <!-- LÍNEA DEL TIEMPO -->
+    <section class="block block--center">
+      <p class="eyebrow" data-field="timeline.seccion"></p>
+      <h3 class="serif-md" data-field="timeline.titulo"></h3>
+      <div class="days-counter">
+        <span class="days-number" id="days-number">0</span>
+        <span class="days-label" data-field="timeline.diasLabel"></span>
+        <span class="days-since" data-field="timeline.desdeLabel"></span>
+      </div>
+      <p class="place">📍 <span data-field="timeline.lugar"></span></p>
+      <div class="timeline" id="timeline"></div>
+    </section>
+
+    <!-- MENSAJE DE VOZ -->
+    <section class="block block--center">
+      <p class="eyebrow" data-field="voz.seccion"></p>
+      <div class="voice">
+        <p class="voice__de" data-field="voz.de"></p>
+        <audio controls id="voice-audio" class="voice__audio"></audio>
+      </div>
+      <div class="voice-photo">
+        <img data-src="voz.foto" alt="Mensaje de voz" />
+      </div>
+    </section>
+
+    <!-- CIERRE -->
+    <section class="closing">
+      <img class="closing__img" data-src="cierre.foto" alt="Cierre" />
+      <div class="closing__text">
+        <span class="heart-inline heart-inline--black">❤</span>
+        <h2 class="serif-lg serif-light" data-field="cierre.titulo"></h2>
+        <p class="serif-italic serif-light" data-field="cierre.subtitulo"></p>
+        <p class="closing__firma" data-field="cierre.firma"></p>
+      </div>
+    </section>
+
+    <!-- ÚLTIMA SORPRESA -->
+    <section class="block block--center surprise">
+      <span class="heart-inline">❤</span>
+      <h2 class="serif-lg" data-field="sorpresa.etiqueta"></h2>
+      <p class="muted" data-field="sorpresa.texto1"></p>
+      <p class="serif-italic" data-field="sorpresa.texto2"></p>
+      <button class="btn-primary" id="open-quiz" data-field="sorpresa.boton"></button>
+    </section>
+
+  </main>
+
+  <!-- =================== 5. QUIZ (overlay) =================== -->
+  <section id="screen-quiz" class="screen screen--center screen--overlay">
+    <button class="close-x" id="close-quiz" aria-label="Cerrar">×</button>
+    <div class="quiz-inner">
+      <p class="quiz-intro muted" data-field="quiz.intro"></p>
+      <div class="quiz-steps" id="quiz-steps"></div>
+      <p class="eyebrow eyebrow--tiny" id="quiz-counter"></p>
+      <h2 class="serif-md" id="quiz-question"></h2>
+      <div class="quiz-options" id="quiz-options"></div>
+      <div class="quiz-feedback" id="quiz-feedback" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <!-- =================== 6. FINAL =================== -->
+  <section id="screen-final" class="screen screen--center screen--overlay">
+    <div class="final-inner">
+      <h1 class="serif-xl" data-field="final.titulo"></h1>
+      <p class="muted" data-field="final.subtitulo"></p>
+      <button class="btn-primary final-cta" id="show-coupon">Ver mi vale 💌</button>
+    </div>
+    <div class="hearts-rain" id="hearts-rain" aria-hidden="true"></div>
+  </section>
+
+  <!-- =================== 7. CUPÓN (vale de regalo) =================== -->
+  <section id="screen-coupon" class="screen screen--center screen--overlay">
+    <div class="coupon">
+      <span class="coupon__scissors">✂</span>
+      <p class="eyebrow" data-field="cupon.etiqueta"></p>
+      <p class="coupon__text serif-italic">
+        <span class="heart-inline">❤</span>
+        <span data-field="cupon.texto"></span>
+      </p>
+      <p class="coupon__firma" data-field="cupon.firma"></p>
+    </div>
+    <button class="btn-ghost" id="back-to-gift" data-field="cupon.boton"></button>
+  </section>
+
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
