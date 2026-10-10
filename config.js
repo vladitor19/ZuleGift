@@ -1,14 +1,3 @@
-/* =============================================================
-   REGALO — ARCHIVO DE CONFIGURACIÓN
-   -------------------------------------------------------------
-   Edita SOLO este archivo para personalizar tu regalo.
-   No hace falta tocar el HTML ni el CSS.
-
-   - Para cambiar fotos: pon tus imágenes en la carpeta "assets/"
-     y escribe aquí el nombre del archivo (ej: "assets/foto1.jpg").
-   - Para cambiar textos: edita los valores entre comillas.
-   - Las líneas que empiezan por // son comentarios de ayuda.
-   ============================================================= */
 
 const CONFIG = {
 
@@ -25,7 +14,6 @@ const CONFIG = {
   /* ---------- 2. TAP DEL CORAZÓN (abrir el regalo) ---------- */
   corazon: {
     instruccion: "Cada toque abre un pedacito del recuerdo.",
-    // Número de toques necesarios para abrir el regalo
     toquesNecesarios: 5,
   },
 
@@ -37,7 +25,7 @@ const CONFIG = {
 
   /* ---------- 4. PÁGINA PRINCIPAL (hero) ---------- */
   hero: {
-    foto: "assets/hero.jpg",          // foto grande de cabecera
+    foto: "assets/hero.jpg",
     paraLabel: "PARA",
     para: "Zulema",
     subtitulo: "Zulema y Vladimir",
@@ -49,10 +37,7 @@ const CONFIG = {
     seccion: "NUESTRA CANCIÓN",
     titulo: "Nuestra canción",
     plataforma: "YOUTUBE",
-    foto: "assets/cancion.jpg",       // imagen circular sobre el reproductor
-    // Pega aquí el enlace de YouTube de la canción.
-    // Vale cualquier formato: https://youtu.be/ID, https://www.youtube.com/watch?v=ID
-    // o directamente el enlace embed. El reproductor se genera automáticamente.
+    foto: "assets/cancion.jpg",
     youtubeUrl: "https://youtu.be/1_qRsCQdzuE?si=JuF_m_edqB5sWlUj",
   },
 
@@ -60,7 +45,6 @@ const CONFIG = {
   galeria: {
     seccion: "GALERÍA",
     titulo: "Momentos que no se borran",
-    // Añade todas las fotos que quieras a esta lista
     fotos: [
       "assets/galeria1.jpg",
       "assets/galeria2.jpg",
@@ -74,7 +58,6 @@ const CONFIG = {
   /* ---------- 7. CARTA ---------- */
   carta: {
     seccion: "CARTA",
-    // Cada elemento de la lista es un párrafo
     parrafos: [
       "Hola, mi amor.",
       "Si estás leyendo esto es porque quería regalarte algo un poco diferente. Algo que no se guarda en una caja, sino en el corazón.",
@@ -82,7 +65,7 @@ const CONFIG = {
       "Hemos vivido momentos muy bonitos, pero también otros que nos han hecho más fuertes. Y si algo he aprendido de nosotros es que, pase lo que pase, siempre merece la pena seguir caminando de tu mano.",
       "Gracias por estar cuando más te he necesitado, por creer en mí incluso cuando yo dudaba y por hacer que cualquier lugar sea mi lugar favorito si estás allí.",
       "Quiero seguir creando recuerdos contigo, uno detrás de otro.",
-      "Te quiero muchísimo. Y ojalá, dentro de muchos años, podamos volver a leer esta carta y sonreír al recordar todo lo que hemos vivido.",
+      "Te amo muchísimo. Y ojalá, dentro de muchos años, podamos volver a leer esta carta y sonreír al recordar todo lo que hemos vivido.",
       "Con todo mi amor.",
     ],
     firma: "Vladimir ❤️",
@@ -92,12 +75,10 @@ const CONFIG = {
   timeline: {
     seccion: "RECUERDOS",
     titulo: "Nuestra línea del tiempo",
-    // Fecha de inicio para contar los "días juntos" (formato: AAAA-MM-DD)
     fechaInicio: "2015-07-16",
     diasLabel: "DÍAS JUNTOS",
     desdeLabel: "desde 16 de julio de 2015",
     lugar: "Todo empezó en La Paz",
-    // Eventos de la línea del tiempo
     eventos: [
       {
         fecha: "10 DE DICIEMBRE",
@@ -109,13 +90,13 @@ const CONFIG = {
         fecha: "DICIEMBRE DE 2024",
         foto: "assets/timeline2.jpg",
         titulo: "Nuestro viaje a Villa Verde",
-        texto: "¿Cómo olvidar nuestro viaje a Villa Verde? Fue el primer viaje de vacaciones que nos dimos. La pasamos súper bien y decidimos siempre darnos unas vacaciones y viajar",
+        texto: "¿Cómo olvidar nuestro viaje a Villa Verde? Fue el primer viaje de vacaciones que nos dimos. La pasamos súper bien y decidimos siempre darnos unas vacaciones y viajar.",
       },
       {
         fecha: "12 DE ENERO DE 2026",
         foto: "assets/timeline3.jpg",
         titulo: "Nuestro viaje a Copacabana",
-        texto: "Ese viaje a Copacabana en el que nos quedamos en un hotel a las orillas del lago. Fue otro viaje en el que la pasamos súper bien; recuerdos que solo los dos sabemos",
+        texto: "Ese viaje a Copacabana en el que nos quedamos en un hotel a las orillas del lago. Fue otro viaje en el que la pasamos súper bien; recuerdos que solo los dos sabemos.",
       },
     ],
   },
@@ -124,9 +105,8 @@ const CONFIG = {
   voz: {
     seccion: "MENSAJE DE VOZ",
     de: "De Vladimir",
-    // Pon tu archivo de audio en assets/ (ej: mp3, m4a, ogg)
     audio: "assets/mensaje-de-voz.mp3",
-    foto: "assets/voz.jpg",           // foto bajo el reproductor de voz
+    foto: "assets/voz.jpg",
   },
 
   /* ---------- 10. CIERRE ---------- */
@@ -150,7 +130,6 @@ const CONFIG = {
     intro: "Para descubrir mi última sorpresa tendrás que responder unas preguntas sobre nosotros.",
     preguntaLabel: "PREGUNTA",
     deLabel: "DE",
-    // Para cada pregunta, "correcta" es el índice (empezando en 0) de la respuesta correcta.
     preguntas: [
       {
         pregunta: "¿Dónde fue nuestro primer beso?",
